@@ -40,8 +40,17 @@
 
     ];
 
-    $park = $_GET["parcheggio"];
-    $rating = $_GET["voto"];
+$filteredData=[];
+
+    $park = $_GET["parcheggio"] ?? '';
+    $rating = isset($_GET["voto"]) ? $_GET["voto"] :'';
+    $hasfilters = !empty($park) || !empty($rating);
+
+if ($hasfilters) {
+
+} else {
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +86,7 @@
             </form>
         </div>
     </div>
-
+    <h1></h1>
     <table class="table">
         <thead>
             <tr>
